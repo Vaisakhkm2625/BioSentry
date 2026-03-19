@@ -1,5 +1,9 @@
 <script>
-    import { Info, Shield, Heart, Zap, ArrowRight } from "lucide-svelte";
+    import Info from "lucide-svelte/icons/info";
+import Shield from "lucide-svelte/icons/shield";
+import Heart from "lucide-svelte/icons/heart";
+import Zap from "lucide-svelte/icons/zap";
+import ArrowRight from "lucide-svelte/icons/arrow-right";
     import { fade } from "svelte/transition";
 </script>
 

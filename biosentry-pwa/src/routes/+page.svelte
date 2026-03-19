@@ -8,7 +8,12 @@
   } from "firebase/auth";
   import { userStore } from "$lib/authStore";
   import { goto } from "$app/navigation";
-  import { LogIn, Github, Mail, AlertCircle, QrCode, X } from "lucide-svelte";
+  import LogIn from "lucide-svelte/icons/log-in";
+import Github from "lucide-svelte/icons/github";
+import Mail from "lucide-svelte/icons/mail";
+import AlertCircle from "lucide-svelte/icons/alert-circle";
+import QrCode from "lucide-svelte/icons/qr-code";
+import X from "lucide-svelte/icons/x";
   import { isValidEmail } from "$lib/validation";
   import QRScanner from "$lib/components/QRScanner.svelte";
 

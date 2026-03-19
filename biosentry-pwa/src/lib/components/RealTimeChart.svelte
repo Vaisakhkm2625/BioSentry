@@ -27,9 +27,11 @@
         CategoryScale,
       );
     });
-    import("svelte-chartjs").then((mod) => {
+
+    import("svelte5-chartjs").then((mod) => {
       Line = mod.Line;
     });
+
   }
 
   export let data = [];

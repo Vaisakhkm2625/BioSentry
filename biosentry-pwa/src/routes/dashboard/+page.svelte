@@ -4,18 +4,16 @@
   import { medicationsStore } from "$lib/medicationStore";
   import { getDatabase, ref, onValue } from "firebase/database";
   import { getApp } from "firebase/app";
-  import {
-    Activity,
-    Plus,
-    User,
-    ChevronRight,
-    HeartPulse,
-    Thermometer,
-    Droplets,
-    Zap,
-    LogOut,
-    X,
-  } from "lucide-svelte";
+  import Activity from "lucide-svelte/icons/activity";
+import Plus from "lucide-svelte/icons/plus";
+import User from "lucide-svelte/icons/user";
+import ChevronRight from "lucide-svelte/icons/chevron-right";
+import HeartPulse from "lucide-svelte/icons/heart-pulse";
+import Thermometer from "lucide-svelte/icons/thermometer";
+import Droplets from "lucide-svelte/icons/droplets";
+import Zap from "lucide-svelte/icons/zap";
+import LogOut from "lucide-svelte/icons/log-out";
+import X from "lucide-svelte/icons/x";
   import { fade, slide, scale } from "svelte/transition";
   import { clickOutside } from "$lib/clickOutside";
 
@@ -210,6 +208,7 @@
       {:else}
         <div
           class="glass p-8 flex flex-col items-center justify-center text-center opacity-60 border-dashed"
+            on:click={toggleAddMedicine}
         >
           <div
             class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-3"
@@ -218,6 +217,7 @@
           </div>
           <p class="text-sm font-medium">No medications added yet</p>
           <p class="text-xs text-text-muted">
+            
             Click "Add New" to track your medicine
           </p>
         </div>

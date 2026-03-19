@@ -1,0 +1,4 @@
+prompt1.md
+.direnv
+node_modules/*
+.env

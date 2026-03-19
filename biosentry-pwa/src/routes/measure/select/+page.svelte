@@ -3,7 +3,9 @@
         medicationsStore,
         selectedMedicationStore,
     } from "$lib/medicationStore";
-    import { ArrowLeft, Check, Smartphone } from "lucide-svelte";
+    import ArrowLeft from "lucide-svelte/icons/arrow-left";
+import Check from "lucide-svelte/icons/check";
+import Smartphone from "lucide-svelte/icons/smartphone";
     import { fade, scale } from "svelte/transition";
     import { goto } from "$app/navigation";
 

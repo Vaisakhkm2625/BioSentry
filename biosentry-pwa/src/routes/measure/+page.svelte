@@ -1,18 +1,16 @@
 <script>
     import { onMount, onDestroy } from "svelte";
-    import {
-        Activity,
-        Camera,
-        AlertTriangle,
-        PhoneCall,
-        ArrowLeft,
-        CheckCircle2,
-        Zap,
-        Circle,
-        X,
-        ChevronRight,
-        History,
-    } from "lucide-svelte";
+    import Activity from "lucide-svelte/icons/activity";
+import Camera from "lucide-svelte/icons/camera";
+import AlertTriangle from "lucide-svelte/icons/alert-triangle";
+import PhoneCall from "lucide-svelte/icons/phone-call";
+import ArrowLeft from "lucide-svelte/icons/arrow-left";
+import CheckCircle2 from "lucide-svelte/icons/check-circle-2";
+import Zap from "lucide-svelte/icons/zap";
+import Circle from "lucide-svelte/icons/circle";
+import X from "lucide-svelte/icons/x";
+import ChevronRight from "lucide-svelte/icons/chevron-right";
+import History from "lucide-svelte/icons/history";
     import { selectedMedicationStore } from "$lib/medicationStore";
     import RealTimeChart from "$lib/components/RealTimeChart.svelte";
     import { fade, slide, scale } from "svelte/transition";
@@ -103,7 +101,11 @@
 
     function handleQrSuccess(decodedText) {
         try {
-            const data = JSON.parse(decodedText);
+
+                window.open(decodedText);
+            console.log(decodedText)
+            /*const data = JSON.parse(decodedText);
+            console.log(data)
             if (data.url && data.username && data.password) {
                 deviceStore.set({
                     url: data.url,
@@ -111,11 +113,13 @@
                     password: data.password,
                     isConnected: true,
                 });
+
+
                 isPaired = true;
                 stopScanning();
             } else {
                 qrError = "Invalid QR code format";
-            }
+            }*/
         } catch (e) {
             qrError = "Invalid QR code content";
         }

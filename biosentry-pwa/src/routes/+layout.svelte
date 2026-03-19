@@ -2,7 +2,11 @@
   import "../app.css";
   import { userStore, authLoading } from "$lib/authStore";
   import { onMount } from "svelte";
-  import { LogOut, Activity, User, Info, LayoutDashboard } from "lucide-svelte";
+  import LogOut from "lucide-svelte/icons/log-out";
+import Activity from "lucide-svelte/icons/activity";
+import User from "lucide-svelte/icons/user";
+import Info from "lucide-svelte/icons/info";
+import LayoutDashboard from "lucide-svelte/icons/layout-dashboard";
   import { auth } from "$lib/firebase";
   import { signOut } from "firebase/auth";
   import { page } from "$app/stores";

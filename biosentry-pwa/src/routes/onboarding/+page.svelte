@@ -4,15 +4,13 @@
     import { doc, setDoc } from "firebase/firestore";
     import { goto } from "$app/navigation";
     import { fade, slide } from "svelte/transition";
-    import {
-        ChevronRight,
-        ChevronLeft,
-        CheckCircle2,
-        Search,
-        X,
-        Plus,
-        AlertCircle,
-    } from "lucide-svelte";
+    import ChevronRight from "lucide-svelte/icons/chevron-right";
+import ChevronLeft from "lucide-svelte/icons/chevron-left";
+import CheckCircle2 from "lucide-svelte/icons/check-circle-2";
+import Search from "lucide-svelte/icons/search";
+import X from "lucide-svelte/icons/x";
+import Plus from "lucide-svelte/icons/plus";
+import AlertCircle from "lucide-svelte/icons/alert-circle";
     import { isValidContact } from "$lib/validation";
 
     let step = 1;

@@ -6,7 +6,11 @@
   import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
   import { getDatabase, ref, set } from 'firebase/database';
   import { initializeApp, getApps } from 'firebase/app';
-  import { CheckCircle, Cpu, AlertTriangle, Loader, QrCode } from 'lucide-svelte';
+  import CheckCircle from "lucide-svelte/icons/check-circle";
+import Cpu from "lucide-svelte/icons/cpu";
+import AlertTriangle from "lucide-svelte/icons/alert-triangle";
+import Loader from "lucide-svelte/icons/loader";
+import QrCode from "lucide-svelte/icons/qr-code";
 
   // ── Firebase RTDB (uses same project as the existing firestore app) ───────
   // We grab the already-initialized app so we don't double-init

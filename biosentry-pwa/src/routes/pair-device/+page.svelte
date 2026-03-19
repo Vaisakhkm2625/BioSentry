@@ -105,9 +105,7 @@
         <p class="text-text-muted text-sm">
           The IoT device will start pushing sensor data to your account shortly.
         </p>
-        <a href="/dashboard" class="btn btn-primary w-full mt-2"
-          >Go to Dashboard</a
-        >
+        <a href="/measure" class="btn btn-primary w-full mt-2">Go to Measure</a>
       </div>
     {:else if state === "error"}
       <div

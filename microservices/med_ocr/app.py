@@ -44,7 +44,7 @@ def extract_medicine_details(image_base64: str) -> dict:
                         "type": "text",
                         "text": (
                             "Extract the medicine name and batch number "
-                            "from this medicine image and return ONLY JSON "
+                            "from this medicine image and return ONLY JSON (do not add markdown code box)"
                             "in this format:\n\n"
                             "{\n"
                             '  "medicine_name": string | null,\n'

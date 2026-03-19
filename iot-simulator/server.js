@@ -18,10 +18,10 @@ const {
 } = require('firebase/database');
 
 // ─── Config ────────────────────────────────────────────────────────────────
-const DEVICE_ID    = process.env.DEVICE_ID        || 'biosentry-device-002';
+const DEVICE_ID    = process.env.DEVICE_ID        || 'biosentry-device-001';
 const PWA_URL      = process.env.PWA_URL           || 'http://localhost:5173';
 const PORT         = 3001;
-const PUSH_INTERVAL_MS = 2 * 60 * 1000; // 2 minutes
+const PUSH_INTERVAL_MS =2  * 1000;// 2sec // 2 * 60 * 1000; // 2 minutes
 
 const firebaseConfig = {
     apiKey:      process.env.FIREBASE_API_KEY,

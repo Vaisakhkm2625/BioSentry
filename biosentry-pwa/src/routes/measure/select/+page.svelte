@@ -3,9 +3,8 @@
         medicationsStore,
         selectedMedicationStore,
     } from "$lib/medicationStore";
-    import ArrowLeft from "lucide-svelte/icons/arrow-left";
-import Check from "lucide-svelte/icons/check";
-import Smartphone from "lucide-svelte/icons/smartphone";
+    import Check from "lucide-svelte/icons/check";
+    import Smartphone from "lucide-svelte/icons/smartphone";
     import { fade, scale } from "svelte/transition";
     import { goto } from "$app/navigation";
 
@@ -24,17 +23,7 @@ import Smartphone from "lucide-svelte/icons/smartphone";
     }
 </script>
 
-<div in:fade class="max-w-md mx-auto space-y-8 pb-12">
-    <header class="flex items-center gap-4 py-4">
-        <a
-            href="/dashboard"
-            class="p-2 glass hover:bg-surface transition-colors"
-        >
-            <ArrowLeft size={20} />
-        </a>
-        <h1 class="text-xl font-bold">Select Medication</h1>
-    </header>
-
+<div class="space-y-8">
     <section class="space-y-6">
         <div class="text-center space-y-2">
             <h2 class="text-3xl font-extrabold tracking-tight">

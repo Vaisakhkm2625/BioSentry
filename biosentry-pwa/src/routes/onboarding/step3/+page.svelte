@@ -1,18 +1,18 @@
 <script>
-    import { onboardingData } from "$lib/onboardingStore";
+    import { onboarding } from "$lib/stores/onboarding.svelte";
     import { userStore } from "$lib/authStore";
     import { db } from "$lib/firebase";
     import { doc, setDoc } from "firebase/firestore";
     import { goto } from "$app/navigation";
     import CheckCircle2 from "lucide-svelte/icons/check-circle-2";
-import ChevronLeft from "lucide-svelte/icons/chevron-left";
+    import ChevronLeft from "lucide-svelte/icons/chevron-left";
 
     async function finish() {
         if (!$userStore) return;
         await setDoc(doc(db, "user_profiles", $userStore.uid), {
-            ...$onboardingData,
+            ...onboarding.profile,
             onboardingComplete: true,
-            lastUpdated: new Date().toISOString()
+            lastUpdated: new Date().toISOString(),
         });
         goto("/dashboard");
     }
@@ -26,7 +26,12 @@ import ChevronLeft from "lucide-svelte/icons/chevron-left";
     </div>
 
     <div class="flex justify-between">
-        <button on:click={() => goto("/onboarding/step3")} class="btn btn-outline"><ChevronLeft /> Back</button>
-        <button on:click={finish} class="btn btn-primary">Complete Profile</button>
+        <button
+            on:click={() => goto("/onboarding/step3")}
+            class="btn btn-outline"><ChevronLeft /> Back</button
+        >
+        <button on:click={finish} class="btn btn-primary"
+            >Complete Profile</button
+        >
     </div>
 </div>
